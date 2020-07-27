@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class RepositoryVendaHasItem extends RepositoryBase
 {
-    public function __construct(Request $request)
+    public function __construct(Request $request = null)
     {
         parent::__construct(new VendaHasItem(), $request);
     }
@@ -17,7 +17,6 @@ class RepositoryVendaHasItem extends RepositoryBase
     public function deletarPorVendaId($vendaId){
         return VendaHasItem::where('venda_id', $vendaId)->delete();
     }
-
 
     // API
 

@@ -34,7 +34,7 @@
                                 <td>{{ $venda->email_cliente}}</td>
                                 <td>{{ $venda->endereco}}</td>
                                 <td>{{ $venda->desconto}}</td>
-                                <td>{{ number_format(\App\Models\VendaHasItem::obterValorTotalPorVendaId($venda->id, $venda->desconto), 2)}}</td>
+                                <td>{{ number_format(\App\Models\VendaHasItem::obterValorTotalPorVendaId($venda->id, $venda->desconto), 2, ',', '.')}}</td>
                                 <td>{{ date('d/m/Y H:i', strtotime($venda->created_at))}}</td>
                                 <td align="center">
                                     <a class="btn btn-sm btn-info" data-container="body" data-toggle="tooltip"

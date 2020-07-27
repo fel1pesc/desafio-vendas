@@ -1,11 +1,7 @@
 @extends('layouts.app')
 
 @section('scripts-header')
-    <style>
-        body{
-            background-color: yellow;
-        }
-    </style>
+
 @stop
 
 @section('content')

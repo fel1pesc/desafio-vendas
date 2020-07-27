@@ -18,7 +18,7 @@ abstract class RepositoryBase
      * @param $model
      * @param $request
      */
-    public function __construct(Model $model, Request $request)
+    public function __construct(Model $model, Request $request = null)
     {
         $this->model = $model;
         $this->request = $request;

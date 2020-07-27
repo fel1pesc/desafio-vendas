@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Venda;
 use App\Repositories\RepositoryItem;
 use App\Repositories\RepositoryVenda;
-use App\Repositories\RepositoryVendaHasItem;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class VendaController extends Controller
@@ -14,14 +12,12 @@ class VendaController extends Controller
     private $request;
     private $repositoryVenda;
     private $repositoryItem;
-    private $repositoryVendaHasItem;
 
     public function __construct()
     {
         $this->request = Request::capture();
         $this->repositoryVenda = new RepositoryVenda($this->request);
-        $this->repositoryItem = new RepositoryItem();
-        $this->repositoryVendaHasItem = new RepositoryVendaHasItem();
+        $this->repositoryItem = new RepositoryItem($this->request);
     }
 
     public function index()
@@ -52,7 +48,7 @@ class VendaController extends Controller
 
     public function destroy()
     {
-        return $this->repositoryVenda->destroy($this);
+        return $this->repositoryVenda->destroy();
     }
 
     public function obterItensParaFormPorVendaId($vendaId)

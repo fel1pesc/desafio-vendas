@@ -6,20 +6,23 @@ namespace App\Repositories;
 
 use App\Models\Venda;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RepositoryVenda extends RepositoryBase
 {
     private $repositoryVendaHasItem;
 
-    public function __construct(Request $request)
+    public function __construct(Request $request = null)
     {
         parent::__construct(new Venda(), $request);
         $this->repositoryVendaHasItem = new RepositoryVendaHasItem($request);
     }
 
     public function store(){
+
+        DB::beginTransaction();
+
         try {
-            \DB::beginTransaction();
 
             $id = $this->request->input('id');
             $itens = $this->request->input('itens_values');
@@ -63,23 +66,23 @@ class RepositoryVenda extends RepositoryBase
 
     public function destroy()
     {
-        try {
-            \DB::beginTransaction();
+        DB::beginTransaction();
 
+        try {
             $id = $this->request->input('id');
 
             $this->repositoryVendaHasItem->deletarPorVendaId($id);
 
-            $delete = $this->repositoryVenda->deletarPorId($id);
+            $delete = self::deletarPorId($id);
 
             if(!$delete)
                 throw new \Exception('Erro ao excluir Venda');
 
-            \DB::commit();
+            DB::commit();
             return response()->json(['success' => true, 'msg'=> 'Venda excluida com sucesso.']);
 
         } catch (\Exception $exc){
-            \DB::rollback();
+            DB::rollback();
             return response()->json(['success' => null, 'msg' => $exc->getMessage()]);
         }
     }

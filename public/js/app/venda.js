@@ -107,7 +107,7 @@ $("#form-venda").on("click", "#adicionar-item", function() {
 
 function adicionarItem(itens, id, itemId, nomeItem, qtd, preco, deletar)
 {
-    itens.push({ id: id, item_id: itemId, qtd: qtd, preco: preco, deletar: deletar });
+    itens.push({ id: id, item_id: itemId, item_descricao: nomeItem, qtd: qtd, preco: preco, deletar: deletar });
 
     inserirItem(itens);
 
@@ -145,16 +145,15 @@ function carregarItens()
 {
     var vendaId = $("#id").val();
 
-    if(vendaId != '')
-    {
+    if(vendaId != '') {
+        inserirItem([]);
         CustomPreload.show();
         $.ajax({
             type: "GET",
             url: urlBase + "venda/obter-itens/" + vendaId,
             data: {},
             success: function(data){
-                if(data)
-                {
+                if(data) {
                     data.forEach(function(item, index) {
                         adicionarItem(obterItens(), item.id, item.item_id, item.descricao, item.qtd, item.preco, false);
                     });
