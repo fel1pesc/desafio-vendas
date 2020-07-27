@@ -17,14 +17,14 @@
                 <div class="table-responsive">
                     <table class="table table-striped">
                         <thead>
-                        <tr>
+                        <tr style="white-space: nowrap;">
                             <th>Nome Cliente</th>
                             <th>Email Cliente</th>
                             <th>Endereço</th>
                             <th>Desconto (%)</th>
                             <th>Valor Total (R$)</th>
                             <th>Data</th>
-                            <th>Ações</th>
+                            <th style="text-align: center" width="8%">Ações</th>
                         </tr>
                         </thead>
                         <tbody id="table">

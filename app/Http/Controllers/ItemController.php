@@ -32,35 +32,30 @@ class ItemController extends Controller
     public function store()
     {
         try {
-            $result = \DB::transaction(function ()
-            {
-                $id = $this->request->input('id');
+            \DB::beginTransaction();
 
-                $item = Item::findOrNew($id);
+            $id = $this->request->input('id');
 
-                $action = isset($item->id) ? 'edit' : 'create';
+            $item = Item::findOrNew($id);
 
-                $item->fill($this->request->all());
+            $item->fill($this->request->all());
 
-                $validate = validator($this->request->all(), $item->rules(), $item->mensages);
+            $validate = validator($this->request->all(), $item->rules(), $item->mensages);
 
-                if ($validate->fails())
-                    return redirect()->route("item.$action", $action == 'edit' ? $item : [])->withErrors($validate)->withInput();
+            if ($validate->fails())
+                return redirect()->back()->withErrors($validate)->withInput();
 
-                $save = $item->save();
+            $save = $item->save();
 
-                if(!$save)
-                    throw new \Exception('Erro ao cadastrar Item!');
-
-                return redirect()->route('item.index')->withStatus('Item cadastrado com sucesso!');
-            });
+            if(!$save)
+                throw new \Exception('Erro ao cadastrar Item!');
 
             \DB::commit();
-            return $result;
+            return redirect()->route('item.index')->withStatus('Item cadastrado com sucesso!');
 
         } catch (\Exception $exc){
             \DB::rollback();
-            return response()->json(['success' => null, 'msg' => $exc->getMessage()]);
+            return redirect()->back()->with('validation', $exc->getMessage());
         }
     }
 
@@ -72,20 +67,17 @@ class ItemController extends Controller
     public function destroy()
     {
         try {
-            $result = \DB::transaction(function (){
+            \DB::beginTransaction();
 
-                $id = $this->request->input('id');
+            $id = $this->request->input('id');
 
-                $delete = $this->repositoryItem->deletarPorId($id);
+            $delete = $this->repositoryItem->deletarPorId($id);
 
-                if(!$delete)
-                    throw new \Exception('Erro ao excluir Item');
-
-                return response()->json(['success' => true, 'msg'=> 'Item excluido com sucesso.']);
-            });
+            if(!$delete)
+                throw new \Exception('Erro ao excluir Item');
 
             \DB::commit();
-            return $result;
+            return response()->json(['success' => true, 'msg'=> 'Item excluido com sucesso.']);
 
         } catch (\Exception $exc){
             \DB::rollback();

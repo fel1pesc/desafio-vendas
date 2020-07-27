@@ -60,7 +60,7 @@
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <button type="button" class="btn btn-primary" id="adicionar-item"><i class="fa fa-plus" aria-hidden="true"></i> Incluir Item</button>
+                            <button type="button" class="btn btn-primary" id="adicionar-item"><i class="fa fa-plus" aria-hidden="true"></i> Incluir Item a Venda</button>
                         </div>
                     </div>
                     <div class="row">

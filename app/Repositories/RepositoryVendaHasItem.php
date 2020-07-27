@@ -6,7 +6,7 @@ namespace App\Repositories;
 
 use App\Models\VendaHasItem;
 
-class RepositoryVendaHasItem extends RepositoryBaseContract
+class RepositoryVendaHasItem extends RepositoryBase
 {
     public function __construct()
     {

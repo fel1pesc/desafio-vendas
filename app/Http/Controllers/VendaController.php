@@ -48,26 +48,24 @@ class VendaController extends Controller
 
             $venda = Venda::findOrNew($id);
 
-            $action = isset($venda->id) ? 'edit' : 'create';
-
             $venda->fill($this->request->all());
 
             $validate = validator($this->request->all(), $venda->rules(), $venda->mensages);
 
             if ($validate->fails())
-                return redirect()->route("venda.$action", $action == 'edit' ? $venda : [])->withErrors($validate)->withInput();
+                return redirect()->back()->withErrors($validate)->withInput();
 
             $venda->save();
 
             $itens = json_decode($itens, true) ?? [];
-            $existeItem = false;
+//            $existeItem = false;
 
             foreach ($itens as $row) {
 
                 if($row['deletar'] == true)
                     $this->repositoryVendaHasItem->deletarPorId($row['id']);
-                else
-                    $existeItem = true;
+//                else
+//                    $existeItem = true;
 
                 if($row['id'] === 0 && $row['deletar'] == false)
                 {
@@ -80,17 +78,17 @@ class VendaController extends Controller
                 }
             }
 
-            if ($existeItem == false) {
-                DB::rollBack();
-                return redirect()->back()->with('validation', 'Adicione pelo menos um Item a Venda.');
-            }
+//            if ($existeItem == false) {
+//                DB::rollBack();
+//                throw new \Exception('Adicione pelo menos um Item a Venda');
+//            }
 
             DB::commit();
             return redirect()->route('venda.index')->withStatus('Venda cadastrada com sucesso!');
 
         } catch (\Exception $exc){
             DB::rollBack();
-            return redirect()->back()->with('validation', 'Error - Nº['.$exc->getCode().'] - Erro ao cadastrar Venda.');
+            return redirect()->back()->with('validation', $exc->getMessage());
         }
     }
 
@@ -115,14 +113,12 @@ class VendaController extends Controller
             if(!$delete)
                 throw new \Exception('Erro ao excluir Venda');
 
-            return response()->json(['success' => true, 'msg'=> 'Venda excluido com sucesso.']);
-
             \DB::commit();
-            return $result;
+            return response()->json(['success' => true, 'msg'=> 'Venda excluida com sucesso.']);
 
         } catch (\Exception $exc){
             \DB::rollback();
-            return response()->json(['success' => null, 'msg' => 'Nº['.$exc->getCode().'] - Erro ao excluir Venda.']);
+            return response()->json(['success' => null, 'msg' => $exc->getMessage()]);
         }
     }
 

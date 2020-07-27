@@ -6,12 +6,12 @@ namespace App\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 
-abstract class RepositoryBaseContract
+abstract class RepositoryBase
 {
     protected $model;
 
     /**
-     * RepositoryBaseContract constructor.
+     * RepositoryBase constructor.
      * @param $model
      */
     public function __construct(Model $model)

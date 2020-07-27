@@ -6,7 +6,7 @@ namespace App\Repositories;
 
 use App\Models\Item;
 
-class RepositoryItem extends RepositoryBaseContract
+class RepositoryItem extends RepositoryBase
 {
     public function __construct()
     {

@@ -66,7 +66,7 @@ $("#form-venda").on("click", "#adicionar-item", function() {
     let qtd = $("#qtd-item").val();
     let preco = $("#preco-item").val();
 
-    let precoFormated = preco.replace('.', '')
+    let precoFormated = preco.replace('.', '');
     precoFormated = precoFormated.replace(',', '.');
 
     let itens = obterItens();
@@ -95,13 +95,13 @@ $("#form-venda").on("click", "#adicionar-item", function() {
     }
     else {
         if(itemId == 0)
-            swal({title: 'Item não selecionado.', type: "warning", timer: 3000, showConfirmButton: false});
+            swal({title: 'Item não foi selecionado!', type: "warning", timer: 3000, showConfirmButton: false});
 
         else if(qtd == '')
-            swal({title: 'Quantidade não informada.', type: "warning", timer: 3000, showConfirmButton: false});
+            swal({title: 'Quantidade não foi informada!', type: "warning", timer: 3000, showConfirmButton: false});
 
         else if(preco == 0)
-            swal({title: 'Preço não informado.', type: "warning", timer: 3000, showConfirmButton: false});
+            swal({title: 'Preço não foi informado!', type: "warning", timer: 3000, showConfirmButton: false});
     }
 });
 
