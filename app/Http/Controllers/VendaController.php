@@ -58,16 +58,13 @@ class VendaController extends Controller
             $venda->save();
 
             $itens = json_decode($itens, true) ?? [];
-//            $existeItem = false;
 
             foreach ($itens as $row) {
 
                 if($row['deletar'] == true)
                     $this->repositoryVendaHasItem->deletarPorId($row['id']);
-//                else
-//                    $existeItem = true;
 
-                if($row['id'] === 0 && $row['deletar'] == false)
+                elseif($row['id'] === 0 && $row['deletar'] == false)
                 {
                     $item = ['venda_id' => $venda->id,
                         'item_id' => $row['item_id'],
@@ -77,11 +74,6 @@ class VendaController extends Controller
                     $this->repositoryVendaHasItem->criar($item);
                 }
             }
-
-//            if ($existeItem == false) {
-//                DB::rollBack();
-//                throw new \Exception('Adicione pelo menos um Item a Venda');
-//            }
 
             DB::commit();
             return redirect()->route('venda.index')->withStatus('Venda cadastrada com sucesso!');
