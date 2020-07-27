@@ -4,19 +4,24 @@
 namespace App\Repositories;
 
 
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 abstract class RepositoryBase
 {
     protected $model;
+    protected $request;
 
     /**
      * RepositoryBase constructor.
      * @param $model
+     * @param $request
      */
-    public function __construct(Model $model)
+    public function __construct(Model $model, Request $request)
     {
         $this->model = $model;
+        $this->request = $request;
     }
 
     public function criar(array $objeto)

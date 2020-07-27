@@ -14,9 +14,18 @@ class CreateVendaHasItemTable extends Migration
     public function up()
     {
         Schema::create('venda_has_item', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('venda_id');
-            $table->integer('item_id');
+            $table->increments('id');
+
+            $table->addColumn("integer", 'venda_id', [
+                "length" => 10,
+                "unsigned" => true
+            ]);
+
+            $table->addColumn("integer", 'item_id', [
+                "length" => 10,
+                "unsigned" => true
+            ]);
+
             $table->integer('quantidade');
             $table->double('preco');
 

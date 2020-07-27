@@ -14,7 +14,7 @@ class CreateVendaTable extends Migration
     public function up()
     {
         Schema::create('venda', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('nome_cliente');
             $table->string('email_cliente', 100);
             $table->text('endereco')->nullable();

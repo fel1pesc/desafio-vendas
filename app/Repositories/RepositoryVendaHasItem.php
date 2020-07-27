@@ -5,12 +5,13 @@ namespace App\Repositories;
 
 
 use App\Models\VendaHasItem;
+use Illuminate\Http\Request;
 
 class RepositoryVendaHasItem extends RepositoryBase
 {
-    public function __construct()
+    public function __construct(Request $request)
     {
-        parent::__construct(new VendaHasItem());
+        parent::__construct(new VendaHasItem(), $request);
     }
 
     public function deletarPorVendaId($vendaId){

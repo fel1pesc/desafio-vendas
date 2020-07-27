@@ -5,12 +5,13 @@ namespace App\Repositories;
 
 
 use App\Models\Item;
+use Illuminate\Http\Request;
 
 class RepositoryItem extends RepositoryBase
 {
-    public function __construct()
+    public function __construct(Request $request)
     {
-        parent::__construct(new Item());
+        parent::__construct(new Item(), $request);
     }
 
     public function obterTodosParaSelect()
