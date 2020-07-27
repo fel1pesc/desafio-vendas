@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cbef5652-b267-4269-b217-35a3e455d5c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VendaController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VendaController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
-              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+              <caret line="65" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#40#61#0#PHP" expanded="true" />
               </folding>
@@ -328,7 +327,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="vendacontr&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/app/Http/Controllers/VendaController.php&#10;.env&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/.env&#10;item/inde&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/resources/views/pages/item/index.blade.php&#10;Venda.php&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/app/Models/Venda.php&#10;app.&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/resources/views/layouts/app.blade.php&#10;DatabaseSee&#9;FILE&#9;file://C:/Users/Felipe/Documents/Felipe/desafio-vendas/database/seeds/DatabaseSeeder.php&#10;VendaCo&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/app/Http/Controllers/Api/VendaController.php&#10;helpers&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/library/helpers.php&#10;venda/inde&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/pages/venda/index.blade.php&#10;venda.js&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/public/js/app/venda.js&#10;VendaHas&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/app/Models/VendaHasItem.php&#10;AuthController&#9;null&#9;null&#10;auth.php&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/config/auth.php&#10;AuthServi&#9;null&#9;null&#10;user.php&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/app/Models/User.php&#10;composer&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/composer.json&#10;app&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/layouts/app.blade.php&#10;web.php&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/routes/web.php&#10;navbar&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/layouts/navbar.blade.php&#10;usersta&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/database/seeds/UsersTableSeeder.php&#10;app.bla&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/layouts/app.blade.php&#10;item/in&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/pages/item/index.blade.php&#10;web.ph&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/routes/web.php&#10;login.b&#9;FILE&#9;file://C:/Users/Felipe/Desktop/desafio/resources/views/auth/login.blade.php&#10;item&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/public/js/app/item.js&#10;item.php&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Models/Item.php&#10;venda.php&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Models/Venda.php&#10;helpers.js&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/public/js/helpers.js&#10;item/ind&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/resources/views/pages/item/index.blade.php&#10;vendaqii&#9;null&#9;null&#10;item/form&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/resources/views/pages/item/form.blade.php&#10;item.js&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/public/js/app/item.js&#10;venda.&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/public/js/app/venda.js&#10;composer.json&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/composer.json&#10;vendaco&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Http/Controllers/VendaController.php&#10;venda/form&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/resources/views/pages/venda/form.blade.php&#10;Repository&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Repositories/RepositoryItem.php&#10;library/&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/vendor/mockery/mockery/library&#10;repository&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Repositories/RepositoryItem.php&#10;Item.php&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/app/Models/Item.php&#10;create_item&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/database/migrations/2020_07_24_002136_create_item_table.php&#10;.active&#9;null&#9;null&#10;create_ve&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/database/migrations/2020_07_23_155648_create_venda_table.php&#10;create&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/database/migrations/2020_07_23_155648_create_venda_table.php&#10;app.b&#9;FILE&#9;file://C:/Users/Felipe/Documents/Meus Projetos/desafio/resources/views/layouts/app.blade.php&#10;AppServi&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projetos/eform-tools" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -379,12 +378,13 @@
       <workItem from="1595780533403" duration="17551000" />
       <workItem from="1595809482407" duration="1267000" />
       <workItem from="1595819488276" duration="4991000" />
-      <workItem from="1595826083061" duration="37000" />
+      <workItem from="1595826083061" duration="529000" />
+      <workItem from="1595846297146" duration="547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94577000" />
+    <option name="totallyTimeSpent" value="95616000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,7 +399,7 @@
     <frame x="56" y="-8" width="1318" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20508744" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2082671" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -788,7 +788,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/VendaController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#40#61#0#PHP" expanded="true" />
           </folding>
